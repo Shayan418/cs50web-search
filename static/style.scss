@@ -1,0 +1,27 @@
+$navLightText: #212121;
+
+.nav-link {
+    color: $navLightText;
+}
+
+.nav-link:hover {
+    color: $navLightText;
+    text-decoration: underline;
+}
+
+.products-menu {
+    filter: invert(39%) sepia(4%) saturate(703%) hue-rotate(173deg) brightness(92%) contrast(85%);
+}
+
+.logocontainer {
+    position: relative;
+    text-align: center;
+}
+
+.logo {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    width: auto;
+}
