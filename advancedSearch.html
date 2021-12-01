@@ -18,12 +18,6 @@
         <div class="container-fluid mt-2 ">
             <ul class="nav justify-content-end align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link" href="http://mail.google.com">Gmail</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="images.html">Images</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="#"><img src="static/buttonsymbolofninedots_80014.svg" class="products-menu" height="24" width="24" alt="9 dot svg for products menu">
                     </a>
                 </li>
@@ -36,15 +30,28 @@
     <main>
         <div class="container">
             <div class="row m-2">
-                <div class="logocontainer">
-                    <img class="logo" src="	https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" height="92" width="272" alt="Google logo">
-                </div>
             </div>
             <div class="row search">
                 <form action="" id="searchForm" method='GET' target='_new'>
-                    <input type="text" name="q" id="searchText">
-                    <input type="submit" id="gSearch" value="Google Search">
-                    <input type="submit" id="imLucky" value="I'm Feeling Lucky">
+                    <div class="container">
+                        <div class="row">
+                            <span> all these words: <input type="text" id="all">
+                            </span>
+                        </div>
+                        <div class="row">
+                            <span> this exact word or phrase: <input type="text" id="exact">
+                            </span>
+                        </div>
+                        <div class="row">
+                            <span> any of these words: <input type="text" id="any">
+                            </span>
+                        </div>
+                        <div class="row">
+                            <span> none of these words: <input type="text" id="none">
+                            </span>
+                        </div>
+                    </div>
+                    <input type="submit" id="advancedSearch" value="Advanced Search">
                 </form>
             </div>
         </div>
@@ -56,34 +63,24 @@
 
         window.onload = function () {
 
-            document.getElementById("gSearch").addEventListener("click", () => {
-                document.getElementById('searchForm').onsubmit = function () {
-                    var txt = document.getElementById('searchText');
+            document.getElementById('searchForm').onsubmit = function () {
+                var all = document.getElementById('all');
+                var exact = document.getElementById('exact');
+                var any = document.getElementById('any');
+                var none = document.getElementById('none');
 
-                    let url = "https://google.com/search?"
-                    url = url + "q=" + txt.value
+                let url = "https://google.com/search?"
 
-                    window.location = url;
+                url = url +
+                    "&as_q=" + all.value.replace(/ /g, "+") +
+                    "&as_epq=" + exact.value.replace(/ /g, "+") +
+                    "&as_oq=" + any.value.replace(/ /g, "+") +
+                    "&as_eq=" + none.value.replace(/ /g, "+")
 
-                };
-            });
+                window.location = url;
 
-            document.getElementById("imLucky").addEventListener("click", () => {
-                document.getElementById('searchForm').onsubmit = function () {
-                    var txt = document.getElementById('searchText');
-
-                    let url = "https://google.com/search?"
-                    let luckyparam = "&btnI=I%27m+Feeling+Lucky"
-                    url = url + "q=" + txt.value + luckyparam
-
-                    window.location = url;
-
-                };
-            });
-
-
+            };
         };
-
 
 
     </script>

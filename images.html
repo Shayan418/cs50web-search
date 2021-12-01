@@ -38,13 +38,13 @@
             <div class="row m-2">
                 <div class="logocontainer">
                     <img class="logo" src="	https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" height="92" width="272" alt="Google logo">
+                    <span id="imagesText">images</span>
                 </div>
             </div>
             <div class="row search">
                 <form action="" id="searchForm" method='GET' target='_new'>
                     <input type="text" name="q" id="searchText">
                     <input type="submit" id="gSearch" value="Google Search">
-                    <input type="submit" id="imLucky" value="I'm Feeling Lucky">
                 </form>
             </div>
         </div>
@@ -55,33 +55,17 @@
 
 
         window.onload = function () {
+            
+            document.getElementById('searchForm').onsubmit = function () {
+                var txt = document.getElementById('searchText');
+                
+                let url = "https://google.com/search?"
+                let imageparam = "&tbm=isch"
+                url = url + "q="+ txt.value + imageparam
 
-            document.getElementById("gSearch").addEventListener("click", () => {
-                document.getElementById('searchForm').onsubmit = function () {
-                    var txt = document.getElementById('searchText');
-
-                    let url = "https://google.com/search?"
-                    url = url + "q=" + txt.value
-
-                    window.location = url;
-
-                };
-            });
-
-            document.getElementById("imLucky").addEventListener("click", () => {
-                document.getElementById('searchForm').onsubmit = function () {
-                    var txt = document.getElementById('searchText');
-
-                    let url = "https://google.com/search?"
-                    let luckyparam = "&btnI=I%27m+Feeling+Lucky"
-                    url = url + "q=" + txt.value + luckyparam
-
-                    window.location = url;
-
-                };
-            });
-
-
+                window.location = url;
+                
+            };
         };
 
 
