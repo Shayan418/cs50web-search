@@ -19,6 +19,10 @@ button {
   filter: invert(39%) sepia(4%) saturate(703%) hue-rotate(173deg) brightness(92%) contrast(85%);
 }
 
+.searchIcon {
+  filter: invert(69%) sepia(9%) saturate(222%) hue-rotate(169deg) brightness(91%) contrast(90%);
+}
+
 .logocontainer {
   position: relative;
   text-align: center;
@@ -40,13 +44,109 @@ button {
   margin-left: -57px;
 }
 
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+main .logocontainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 92px;
+  max-height: 290px;
+  height: calc(100% - 400px);
+}
+main .rowsearch {
+  padding: 20px;
+}
+main .rowsearch form {
+  display: block;
+}
+main .rowsearch .searchContainerParent {
+  max-width: 584px;
+  min-width: 360px;
+  width: calc(100% - 0px);
+  margin: 0 auto;
+  display: inline-block;
+  padding-top: 6px;
+}
+main .rowsearch .searchContainerParent .searchContainerBar {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #dfe1e5;
+  box-shadow: none;
+  border-radius: 24px;
+  z-index: 1;
+  height: 46px;
+  margin: 0 auto;
+  max-width: 100%;
+  min-width: 360px;
+  width: auto;
+}
+main .rowsearch .searchContainerParent .searchContainerButtons {
+  display: flex;
+  height: 70px;
+  display: block;
+  padding-top: 18px;
+}
+main .rowsearch .searchContainerParent .searchContainerButtons input[type=submit] {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+main .rowsearch .searchContainerParent .searchContainerButtons input[type=submit]:hover {
+  border-style: solid;
+  border-color: #dadce0;
+  box-shadow: 0 3px 6px -3px #dadce0;
+}
+main .languageBarParent {
+  margin-bottom: 24px;
+}
+main .languageBarParent .languageBar {
+  display: inline-block;
+  font-size: small;
+}
+main .languageBarParent .languageBar a {
+  text-decoration: none;
+  color: #1A0DAB;
+  padding-right: 3px;
+  padding-left: 3px;
+}
+main .languageBarParent .languageBar a:hover {
+  text-decoration: underline;
+}
+
 footer {
-  position: fixed;
+  position: static;
   height: auto;
   bottom: 0px;
   left: 0px;
   right: 0px;
   margin-bottom: 0px;
+  margin-top: auto;
 }
 footer .list-group-item {
   background-color: #f2f2f2;

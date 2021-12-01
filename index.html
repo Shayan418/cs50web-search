@@ -24,7 +24,7 @@
                     <a class="nav-link" href="images.html">Images</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="static/buttonsymbolofninedots_80014.svg" class="products-menu" height="24" width="24" alt="9 dot svg for products menu">
+                    <a class="nav-link" href="#"><img src="static/buttonsymbolofninedots_80014.svg" class="products-menu" height="18" width="18" alt="9 dot svg for products menu">
                     </a>
                 </li>
                 <li class="nav-item">
@@ -34,24 +34,48 @@
         </div>
     </nav>
     <main>
-        <div class="container">
-            <div class="row m-2">
-                <div class="logocontainer">
-                    <img class="logo" src="	https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" height="92" width="272" alt="Google logo">
+        <div class="row m-2 logocontainer">
+            <img class="logo" src="	https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" height="92" width="272" alt="Google logo">
+        </div>
+        <div class="rowsearch">
+            <form action="" id="searchForm" method='GET' target='_new'>
+                <div class="searchContainerParent">
+                    <div class="searchContainer">
+                        <div class="searchContainerBar">
+                            <img src="static/icons8-search.svg" class="searchIcon" height="18" width="18" alt="search icon svg">
+                            <input type="text" name="q" id="searchText">
+                            <img src="static/Google_mic.svg" height="18" width="18" alt="search icon svg">
+                            
+                        </div>
+                        <div class="searchContainerButtons">
+                            <input type="submit" id="gSearch" value="Google Search">
+                            <input type="submit" id="imLucky" value="I'm Feeling Lucky">
+                        </div>
+                    </div>
                 </div>
+            </form>
+        </div>
+        <div class="languageBarParent">
+            <div style="text-align: center; display: inline-block;">
+            <div class="languageBar">
+                Google offered in:
+                <a class="language-item" href="">हिन्दी</a>
+                <a class="language-item" href="">বাংলা</a>
+                <a class="language-item" href="">తెలుగు</a>
+                <a class="language-item" href="">मराठी</a>
+                <a class="language-item" href="">தமிழ்</a>
+                <a class="language-item" href="">ગુજરાતી</a>
+                <a class="language-item" href="">ಕನ್ನಡ</a>
+                <a class="language-item" href="">മലയാളം</a>
+                <a class="language-item" href="">ਪੰਜਾਬੀ</a>
+                </ul>
             </div>
-            <div class="row search">
-                <form action="" id="searchForm" method='GET' target='_new'>
-                    <input type="text" name="q" id="searchText">
-                    <input type="submit" id="gSearch" value="Google Search">
-                    <input type="submit" id="imLucky" value="I'm Feeling Lucky">
-                </form>
-            </div>
+        </div>
         </div>
     </main>
     <footer>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item" style="height: 49px; padding-left: 30px; padding-right: 30px; padding-top: 15px; padding-bottom: 15px;">
+            <li class="list-group-item" style="height: 49px; padding-left: 30px; padding-right: 30px; padding-top: 15px; padding-bottom: 15px; text-align: left;">
                 <ul class="list-unstyled d-flex d-inline-flex nav">
                     <li class="nav-item">India</li>
                 </ul>
