@@ -50,21 +50,47 @@
         </div>
     </main>
     <footer>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="height: 49px; padding-left: 30px; padding-right: 30px; padding-top: 15px; padding-bottom: 15px;">
+                <ul class="list-unstyled d-flex d-inline-flex nav">
+                    <li class="nav-item">India</li>
+                </ul>
+            </li>
+            <li class="list-group-item py-0">
+                <div class="lowerFooter">
+                    <div class="container-footer-1-parent">
+                        <div class="container-footer-1">
+                            <div class="item-footer-1 about">About</div>
+                            <div class="item-footer-1 advertising">Advertising</div>
+                            <div class="item-footer-1 business">Business</div>
+                            <div class="item-footer-1 howSearchWorks">How Search Works</div>
+                        </div>
+                    </div>
+                    <div class="container-footer-2-parent">
+                        <div class="container-footer-2">
+                            <div class="item-footer-2 privacy">Privacy</div>
+                            <div class="item-footer-2 terms">Terms</div>
+                            <div class="item-footer-2 settings">Settings</div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </footer>
     <script>
 
 
         window.onload = function () {
-            
+
             document.getElementById('searchForm').onsubmit = function () {
                 var txt = document.getElementById('searchText');
-                
+
                 let url = "https://google.com/search?"
                 let imageparam = "&tbm=isch"
-                url = url + "q="+ txt.value + imageparam
+                url = url + "q=" + txt.value + imageparam
 
                 window.location = url;
-                
+
             };
         };
 

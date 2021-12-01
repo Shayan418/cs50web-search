@@ -1,3 +1,11 @@
+body,
+input,
+button {
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  color: #202124;
+}
+
 .nav-link {
   color: #212121;
 }
@@ -30,6 +38,131 @@
   position: fixed;
   margin-top: 70px;
   margin-left: -57px;
+}
+
+footer {
+  position: fixed;
+  height: auto;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+}
+footer .list-group-item {
+  background-color: #f2f2f2;
+  color: #70757a;
+  font-size: 15px;
+  font-family: arial, sans-serif;
+}
+footer .list-group-item .lowerFooter {
+  font-size: 14px;
+}
+
+.container-footer-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px;
+  grid-auto-flow: row;
+  justify-content: end;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas: "about advertising business howSearchWorks";
+  width: 0%;
+  height: 49px;
+  width: 400px;
+}
+
+.about {
+  grid-area: about;
+  width: 66.56px;
+}
+
+.advertising {
+  grid-area: advertising;
+  width: 99.25px;
+}
+
+.business {
+  grid-area: business;
+  width: 86.8px;
+}
+
+.howSearchWorks {
+  grid-area: howSearchWorks;
+  width: 146.7px;
+}
+
+.item-footer-1,
+.item-footer-2 {
+  display: grid;
+  /* new */
+  align-items: center;
+  /* new */
+  justify-items: center;
+  height: 46.8px;
+  /* new */
+}
+
+.container-footer-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px;
+  grid-auto-flow: row;
+  justify-content: start;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas: "privacy terms settings";
+  width: 0%;
+  height: 49px;
+  width: 225px;
+}
+
+.privacy {
+  grid-area: privacy;
+  width: 75.86px;
+}
+
+.terms {
+  grid-area: terms;
+  width: 68.11px;
+}
+
+.settings {
+  grid-area: settings;
+  width: 80.58px;
+}
+
+.lowerFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 1200px) {
+  .lowerFooter {
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .lowerFooter {
+    flex-direction: column;
+  }
+
+  .container-footer-1-parent {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-footer-2-parent {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
