@@ -19,6 +19,18 @@ button {
   filter: invert(39%) sepia(4%) saturate(703%) hue-rotate(173deg) brightness(92%) contrast(85%);
 }
 
+#products-menu-circle {
+  position: fixed;
+  height: 38px;
+  width: 38px;
+  margin-left: -28px;
+  margin-top: -8px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: inline-block;
+  z-index: -1;
+}
+
 .searchIcon {
   filter: invert(69%) sepia(9%) saturate(222%) hue-rotate(169deg) brightness(91%) contrast(90%);
 }
@@ -86,7 +98,6 @@ main .rowsearch .searchContainerParent .searchContainerBar {
   align-items: center;
   justify-content: space-between;
   border: 1px solid #dfe1e5;
-  box-shadow: none;
   border-radius: 24px;
   z-index: 1;
   height: 46px;
@@ -94,6 +105,28 @@ main .rowsearch .searchContainerParent .searchContainerBar {
   max-width: 100%;
   min-width: 360px;
   width: auto;
+}
+main .rowsearch .searchContainerParent .searchContainerBar .searchIcon {
+  margin-left: 14px;
+  margin-bottom: 2px;
+}
+main .rowsearch .searchContainerParent .searchContainerBar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 34px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 16px;
+}
+main .rowsearch .searchContainerParent .searchContainerBar .googleMic {
+  position: relative;
+  margin-right: 16px;
+}
+main .rowsearch .searchContainerParent .searchContainerBar:hover {
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  border-color: rgba(223, 225, 229, 0);
 }
 main .rowsearch .searchContainerParent .searchContainerButtons {
   display: flex;
@@ -128,10 +161,11 @@ main .languageBarParent {
 main .languageBarParent .languageBar {
   display: inline-block;
   font-size: small;
+  height: 40px;
 }
 main .languageBarParent .languageBar a {
   text-decoration: none;
-  color: #1A0DAB;
+  color: #1a0dab;
   padding-right: 3px;
   padding-left: 3px;
 }
@@ -156,6 +190,14 @@ footer .list-group-item {
 }
 footer .list-group-item .lowerFooter {
   font-size: 14px;
+}
+footer a {
+  color: #70757a;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #70757a;
+  text-decoration: underline;
 }
 
 .container-footer-1 {
@@ -242,6 +284,13 @@ footer .list-group-item .lowerFooter {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.settings-button {
+  padding: 0;
+  color: #70757a;
+  background-color: #f2f2f2;
+  border: none;
 }
 
 @media only screen and (max-width: 1200px) {

@@ -21,7 +21,19 @@ button {
     filter: invert(39%) sepia(4%) saturate(703%) hue-rotate(173deg) brightness(92%) contrast(85%);
 }
 
-.searchIcon{
+#products-menu-circle {
+    position: fixed;
+    height: 38px;
+    width: 38px;
+    margin-left: -28px;
+    margin-top: -8px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: inline-block;
+    z-index: -1;
+}
+
+.searchIcon {
     filter: invert(69%) sepia(9%) saturate(222%) hue-rotate(169deg) brightness(91%) contrast(90%);
 }
 
@@ -46,12 +58,12 @@ button {
     margin-left: -57px;
 }
 
-body{
-    height:100vh; 
-    margin:0;
-    display:flex; 
-    flex-direction:column; 
-    text-align: center
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 main {
@@ -60,7 +72,7 @@ main {
     height: 100%;
 
     .logocontainer {
-        position:relative;
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: flex-end;
@@ -71,33 +83,58 @@ main {
 
     .rowsearch {
         padding: 20px;
-        
-        form{
+
+        form {
             display: block;
         }
 
-        .searchContainerParent{
+        .searchContainerParent {
             max-width: 584px;
             min-width: 360px;
             width: calc(100% - 0px);
             margin: 0 auto;
             display: inline-block;
             padding-top: 6px;
-            .searchContainerBar{
-                    background: #fff;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    border: 1px solid #dfe1e5;
-                    box-shadow: none;
-                    border-radius: 24px;
-                    z-index: 1;
-                    height: 46px;
-                    margin: 0 auto;
-                    max-width: 100%;
-                    min-width: 360px;
-                    width: auto;
-                
+
+            .searchContainerBar {
+                background: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border: 1px solid #dfe1e5;
+                border-radius: 24px;
+                z-index: 1;
+                height: 46px;
+                margin: 0 auto;
+                max-width: 100%;
+                min-width: 360px;
+                width: auto;
+
+                .searchIcon {
+                    margin-left: 14px;
+                    margin-bottom: 2px;
+                }
+
+                input {
+                    flex: 1;
+                    border: none;
+                    outline: none;
+                    height: 34px;
+                    padding-left: 8px;
+                    padding-right: 8px;
+                    font-size: 16px;
+                }
+
+                .googleMic {
+                    position: relative;
+                    margin-right: 16px;
+                }
+            }
+
+            .searchContainerBar:hover {
+                background-color: #fff;
+                box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+                border-color: rgba(223, 225, 229, 0);
             }
 
             .searchContainerButtons {
@@ -112,7 +149,7 @@ main {
                 border: 1px solid #f8f9fa;
                 border-radius: 4px;
                 color: #3c4043;
-                font-family: arial,sans-serif;
+                font-family: arial, sans-serif;
                 font-size: 14px;
                 margin: 11px 4px;
                 padding: 0 16px;
@@ -128,31 +165,27 @@ main {
                 border-style: solid;
                 border-color: #dadce0;
                 box-shadow: 0 3px 6px -3px rgb(218, 220, 224);
-                
             }
-
         }
-        
     }
 
-    .languageBarParent{
+    .languageBarParent {
         margin-bottom: 24px;
-        .languageBar{
+        .languageBar {
             display: inline-block;
             font-size: small;
-            a{
+            height: 40px;
+            a {
                 text-decoration: none;
-                color: #1A0DAB;
+                color: #1a0dab;
                 padding-right: 3px;
                 padding-left: 3px;
             }
-            a:hover{
+            a:hover {
                 text-decoration: underline;
             }
-            
         }
     }
-
 }
 
 footer {
@@ -162,7 +195,7 @@ footer {
     left: 0px;
     right: 0px;
     margin-bottom: 0px;
-    margin-top:auto;
+    margin-top: auto;
 
     .list-group-item {
         background-color: #f2f2f2;
@@ -172,6 +205,15 @@ footer {
         .lowerFooter {
             font-size: 14px;
         }
+    }
+
+    a {
+        color: #70757a;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #70757a;
+        text-decoration: underline;
     }
 }
 
@@ -256,6 +298,13 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.settings-button {
+    padding: 0;
+    color: #70757a;
+    background-color: #f2f2f2;
+    border: none;
 }
 
 @media only screen and (max-width: 1200px) {
