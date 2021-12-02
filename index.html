@@ -40,7 +40,7 @@
             <img class="logo" src="	https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" height="92" width="272" alt="Google logo">
         </div>
         <div class="rowsearch">
-            <form action="" id="searchForm" method='GET' target='_new'>
+            
                 <div class="searchContainerParent">
                     <div class="searchContainer">
                         <div class="searchContainerBar">
@@ -49,12 +49,17 @@
                             <img src="static/googleMic.svg" class="googleMic" height="18" width="18" alt="search icon svg">
                         </div>
                         <div class="searchContainerButtons">
-                            <input type="submit" id="gSearch" value="Google Search">
-                            <input type="submit" id="imLucky" value="I'm Feeling Lucky">
+                            <button onclick="gSearch()">
+                                <input type="submit" id="gSearch" value="Google Search" onclick="gSearch">
+                            </button>
+                            <button onclick="LSearch()">
+                                <input type="submit" id="imLucky" value="I'm Feeling Lucky" onclick="LSearch">
+
+                            </button>
                         </div>
                     </div>
                 </div>
-            </form>
+
         </div>
         <div class="languageBarParent">
             <div style="text-align: center; display: inline-block;">
@@ -117,10 +122,8 @@
     <script>
 
 
-        window.onload = function () {
 
-            document.getElementById("gSearch").addEventListener("click", () => {
-                document.getElementById('searchForm').onsubmit = function () {
+            function gSearch() {
                     var txt = document.getElementById('searchText');
 
                     let url = "https://google.com/search?"
@@ -129,10 +132,9 @@
                     window.location = url;
 
                 };
-            });
+            
 
-            document.getElementById("imLucky").addEventListener("click", () => {
-                document.getElementById('searchForm').onsubmit = function () {
+            function LSearch() {
                     var txt = document.getElementById('searchText');
 
                     let url = "https://google.com/search?"
@@ -142,10 +144,6 @@
                     window.location = url;
 
                 };
-            });
-
-
-        };
 
 
 
