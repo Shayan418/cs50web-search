@@ -26,6 +26,10 @@ body {
     text-decoration: underline;
 }
 
+.nav-link:focus {
+    color: $navLightText;
+}
+
 .products-menu {
     filter: invert(39%) sepia(4%) saturate(703%) hue-rotate(173deg) brightness(92%) contrast(85%);
 }
