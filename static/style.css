@@ -6,7 +6,8 @@ button {
   color: #202124;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0px;
@@ -216,13 +217,14 @@ main .languageBarParent .languageBar a:hover {
 }
 
 footer {
-  position: static;
+  position: fixed;
   height: auto;
   bottom: 0px;
   left: 0px;
   right: 0px;
   margin-bottom: 0px;
   margin-top: auto;
+  z-index: 0;
 }
 footer .list-group-item {
   background-color: #f2f2f2;
@@ -354,6 +356,50 @@ footer a:hover {
     display: flex;
     justify-content: center;
   }
+}
+label {
+  display: inline-block;
+  min-width: 167px;
+  width: 16%;
+  height: 42px;
+}
+
+#advancedSearch {
+  background-color: #4889f0;
+  color: #fff;
+  font-size: 10px;
+  width: 120px;
+  height: 30px;
+  border-radius: 3px;
+  border-style: none;
+  font-weight: bold;
+}
+
+#advancedSearch:hover {
+  background-color: #357ae8;
+  border-style: solid;
+  border-color: #2f5bb7;
+  border-width: 1px;
+}
+
+.search-hidden {
+  background-color: #fff;
+  width: 589px;
+  height: 186px;
+  display: block;
+  margin: auto;
+  margin-top: -48px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
+  font-size: 13px;
+  min-width: 460px;
+  position: relative;
+  text-align: left;
+}
+.search-hidden .searchInfo {
+  padding: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

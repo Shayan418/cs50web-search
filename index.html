@@ -40,26 +40,23 @@
             <img class="logo" src="	https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" height="92" width="272" alt="Google logo">
         </div>
         <div class="rowsearch">
-            
-                <div class="searchContainerParent">
-                    <div class="searchContainer">
-                        <div class="searchContainerBar">
-                            <img src="static/icons8-search.svg" class="searchIcon" height="18" width="18" alt="search icon svg">
-                            <input type="text" name="q" id="searchText" autocomplete="off">
-                            <img src="static/googleMic.svg" class="googleMic" height="18" width="18" alt="search icon svg">
-                        </div>
-                        <div class="searchContainerButtons">
-                            <button onclick="gSearch()">
-                                <input type="submit" id="gSearch" value="Google Search" onclick="gSearch">
-                            </button>
-                            <button onclick="LSearch()">
-                                <input type="submit" id="imLucky" value="I'm Feeling Lucky" onclick="LSearch">
-
-                            </button>
-                        </div>
+            <div class="searchContainerParent">
+                <div class="searchContainer">
+                    <div class="searchContainerBar">
+                        <img src="static/icons8-search.svg" class="searchIcon" height="18" width="18" alt="search icon svg">
+                        <input type="text" name="q" id="searchText" autocomplete="off">
+                        <img src="static/googleMic.svg" class="googleMic" height="18" width="18" alt="search icon svg">
+                    </div>
+                    <div class="searchContainerButtons">
+                        <button onclick="gSearch()">
+                            <input type="submit" id="gSearch" value="Google Search" onclick="gSearch">
+                        </button>
+                        <button onclick="LSearch()">
+                            <input type="submit" id="imLucky" value="I'm Feeling Lucky" onclick="LSearch">
+                        </button>
                     </div>
                 </div>
-
+            </div>
         </div>
         <div class="languageBarParent">
             <div style="text-align: center; display: inline-block;">
@@ -123,27 +120,27 @@
 
 
 
-            function gSearch() {
-                    var txt = document.getElementById('searchText');
+        function gSearch() {
+            var txt = document.getElementById('searchText');
 
-                    let url = "https://google.com/search?"
-                    url = url + "q=" + txt.value
+            let url = "https://google.com/search?"
+            url = url + "q=" + txt.value
 
-                    window.location = url;
+            window.location = url;
 
-                };
-            
+        };
 
-            function LSearch() {
-                    var txt = document.getElementById('searchText');
 
-                    let url = "https://google.com/search?"
-                    let luckyparam = "&btnI=I%27m+Feeling+Lucky"
-                    url = url + "q=" + txt.value + luckyparam
+        function LSearch() {
+            var txt = document.getElementById('searchText');
 
-                    window.location = url;
+            let url = "https://google.com/search?"
+            let luckyparam = "&btnI=I%27m+Feeling+Lucky"
+            url = url + "q=" + txt.value + luckyparam
 
-                };
+            window.location = url;
+
+        };
 
 
 

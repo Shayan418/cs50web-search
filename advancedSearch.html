@@ -20,7 +20,7 @@
             <ul class="nav justify-content-start align-items-center">
                 <li>
                     <a class="navbar-brand" href="#">
-            <img class="logo" src="	https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" height="24" width="86" alt="Google logo">
+                        <img class="logo" src="	https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" height="24" width="86" alt="Google logo">
                     </a>
                 </li>
             </ul>
@@ -37,51 +37,90 @@
         </div>
     </nav>
     <div class="appbar" style="text-align: left; color: #d93025; font-size: 20px; margin: 25px">
-        <label style="margin-left:10px">Advanced Search</label>    
-   </div>
-   <div style="height:1px; background-color: #ebebeb; width: 100%;">
-
-   </div>
-
+        <label style="margin-left:10px">Advanced Search</label>
+    </div>
+    <div style="height:1px; background-color: #ebebeb; width: 100%;">
+    </div>
     <main>
-        <div class="container">
-            
-            
-            <div class="row m-2">
-            </div>
+        <div class="container mt-2" style="text-align: left;">
             <div class="row search">
-                <form action="" id="searchForm" method='GET' target='_new'>
-                    <div class="container">
-                        <div class="row">
-                            <span> all these words: <input type="text" id="all">
-                            </span>
-                        </div>
-                        <div class="row">
-                            <span> this exact word or phrase: <input type="text" id="exact">
-                            </span>
-                        </div>
-                        <div class="row">
-                            <span> any of these words: <input type="text" id="any">
-                            </span>
-                        </div>
-                        <div class="row">
-                            <span> none of these words: <input type="text" id="none">
-                            </span>
-                        </div>
+                <div class="container mt-2">
+                    <div class="">
+                        <label style="font-size: large;">Find pages with..</label>
                     </div>
-                    <input type="submit" id="advancedSearch" value="Advanced Search">
-                </form>
+                </div>
+                <div class="container">
+                    <div class="">
+                        <label> all these words: </label>
+                        <input type="text" id="all">
+                    </div>
+                    <div class="">
+                        <label> this exact word or phrase: </label>
+                        <input type="text" id="exact">
+                    </div>
+                    <div class="">
+                        <label> any of these words: </label>
+                        <input type="text" id="any">
+                    </div>
+                    <div class="">
+                        <label> none of these words: </label>
+                        <input type="text" id="none">
+                    </div>
+                </div>
+                <div style="max-width: 300px;">
+                    <button type="submit" id="advancedSearch" onclick="advSearch()">Advanced Search</button>
+                </div>
             </div>
         </div>
     </main>
     <footer>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="height: 49px; padding-left: 30px; padding-right: 30px; padding-top: 15px; padding-bottom: 15px; text-align: left;">
+                <ul class="list-unstyled d-flex d-inline-flex nav">
+                    <li class="nav-item">India</li>
+                </ul>
+            </li>
+            <li class="list-group-item py-0">
+                <div class="lowerFooter">
+                    <div class="container-footer-1-parent">
+                        <div class="container-footer-1">
+                            <div class="item-footer-1 about">
+                                <a href="">Help</a>
+                            </div>
+                            <div class="item-footer-1 advertising">
+                                <a href="">Privacy</a>
+                            </div>
+                            <div class="item-footer-1 business">
+                                <a href="">Terms</a>
+                            </div>
+                            <div class="item-footer-1 howSearchWorks" >
+                                <a href="" style="color: #f2f2f2;">How Search Works</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-footer-2-parent" hidden>
+                        <div class="container-footer-2">
+                            <div class="item-footer-2 privacy">
+                                <a href="">Privacy</a>
+                            </div>
+                            <div class="item-footer-2 terms">
+                                <a href="">Terms</a>
+                            </div>
+                            <div class="item-footer-2 ">
+                                <a href="">Settings</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </footer>
     <script>
 
 
-        window.onload = function () {
+       
 
-            document.getElementById('searchForm').onsubmit = function () {
+            function advSearch() {
                 var all = document.getElementById('all');
                 var exact = document.getElementById('exact');
                 var any = document.getElementById('any');
@@ -98,7 +137,6 @@
                 window.location = url;
 
             };
-        };
 
 
     </script>

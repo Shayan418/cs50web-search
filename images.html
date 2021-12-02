@@ -41,24 +41,41 @@
             <span id="imagesText">images</span>
         </div>
         <div class="rowsearch">
-            
-                <div class="searchContainerParent">
-                    <div class="searchContainer">
-                        <div class="searchContainerBar">
-                            <img src="static/icons8-search.svg" class="searchIcon" height="18" width="18" alt="search icon svg">
-                            <input type="text" id="searchText" autocomplete="off">
-                            <div class="cameraIcon"></div>
-                            <img src="static/googleMic.svg" class="googleMicI" height="18" width="18" alt="search icon svg">
-                            <button type="submit" onclick="myfunc()">
-                                <img src="static/icons8-search.svg" class="searchIconI" height="20" width="20" alt="search icon svg">
-                            </button>
-                        </div>
-                        <div class="searchContainerButtons" hidden>
-                            <input type="submit" id="gSearch" value="Google Search">
-                            <input type="submit" id="imLucky" value="I'm Feeling Lucky">
-                        </div>
+            <div class="searchContainerParent">
+                <div class="searchContainer">
+                    <div class="searchContainerBar">
+                        <img src="static/icons8-search.svg" class="searchIcon" height="18" width="18" alt="search icon svg">
+                        <input type="text" id="searchText" autocomplete="off">
+                        <div class="cameraIcon" onclick="searchByBox()"></div>
+                        <img src="static/googleMic.svg" class="googleMicI" height="18" width="18" alt="search icon svg">
+                        <button type="submit" onclick="myfunc()">
+                            <img src="static/icons8-search.svg" class="searchIconI" height="20" width="20" alt="search icon svg">
+                        </button>
+                    </div>
+                    <div class="searchContainerButtons" hidden>
+                        <input type="submit" id="gSearch" value="Google Search">
+                        <input type="submit" id="imLucky" value="I'm Feeling Lucky">
                     </div>
                 </div>
+            </div>
+            <div class="searchContainer search-hidden" id="searchByBox" hidden>
+                <div class="searchInfo">
+                    <div id="Searchbyimage" style="font-size: large; font-weight: bold; display: flex; flex-direction: row; justify-content: space-between;" >
+                        <div>
+                            Search by image
+                        </div>
+                        
+                        <div onclick="searchByBoxhide()" style="cursor: pointer;">
+                            x
+                        </div>
+
+                    </div>
+                    <div >
+                        Search Google with an image instead of text. Try dragging an image here.
+                    </div>
+                    
+                </div>
+            </div>
             
         </div>
         <div class="languageBarParent" hidden>
@@ -121,22 +138,31 @@
     </footer>
     <script>
 
-        
 
-            
 
-            function myfunc() {
-                var txt = document.getElementById('searchText');
 
-                let url = "https://google.com/search?"
-                let imageparam = "&tbm=isch"
-                url = url + "q=" + txt.value + imageparam
 
-                window.location=url;
-               
+        function myfunc() {
+            var txt = document.getElementById('searchText');
 
-            };
-      
+            let url = "https://google.com/search?"
+            let imageparam = "&tbm=isch"
+            url = url + "q=" + txt.value + imageparam
+
+            window.location = url;
+
+
+        };
+
+        function searchByBox() {
+  document.getElementById("searchByBox").removeAttribute("hidden");
+
+}
+
+function searchByBoxhide() {
+  document.getElementById("searchByBox").setAttribute("hidden", true);
+}
+
 
     </script>
 </body>
