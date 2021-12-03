@@ -47,32 +47,34 @@
     <main>
         <div class="container mt-2" style="text-align: left;">
             <div class="row search">
-                <div class="container mt-2">
-                    <div class="">
-                        <label style="font-size: large;">Find pages with..</label>
+                <form action="https://www.google.com/search">
+                    <div class="container mt-2">
+                        <div class="">
+                            <label style="font-size: large;">Find pages with..</label>
+                        </div>
                     </div>
-                </div>
-                <div class="container">
-                    <div class="">
-                        <label> all these words: </label>
-                        <input type="text" id="all">
+                    <div class="container">
+                        <div class="">
+                            <label> all these words: </label>
+                            <input type="text" id="all" name="as_q">
+                        </div>
+                        <div class="">
+                            <label> this exact word or phrase: </label>
+                            <input type="text" id="exact" name="as_epq">
+                        </div>
+                        <div class="">
+                            <label> any of these words: </label>
+                            <input type="text" id="any" name="as_oq">
+                        </div>
+                        <div class="">
+                            <label> none of these words: </label>
+                            <input type="text" id="none" name="as_eq">
+                        </div>
                     </div>
-                    <div class="">
-                        <label> this exact word or phrase: </label>
-                        <input type="text" id="exact">
+                    <div style="max-width: 300px;">
+                        <button type="submit" id="advancedSearch">Advanced Search</button>
                     </div>
-                    <div class="">
-                        <label> any of these words: </label>
-                        <input type="text" id="any">
-                    </div>
-                    <div class="">
-                        <label> none of these words: </label>
-                        <input type="text" id="none">
-                    </div>
-                </div>
-                <div style="max-width: 300px;">
-                    <button type="submit" id="advancedSearch" onclick="advSearch()">Advanced Search</button>
-                </div>
+                </form>
             </div>
         </div>
     </main>
@@ -118,31 +120,6 @@
             </li>
         </ul>
     </footer>
-    <script>
-
-
-
-
-        function advSearch() {
-            var all = document.getElementById('all');
-            var exact = document.getElementById('exact');
-            var any = document.getElementById('any');
-            var none = document.getElementById('none');
-
-            let url = "https://google.com/search?"
-
-            url = url +
-                "&as_q=" + all.value.replace(/ /g, "+") +
-                "&as_epq=" + exact.value.replace(/ /g, "+") +
-                "&as_oq=" + any.value.replace(/ /g, "+") +
-                "&as_eq=" + none.value.replace(/ /g, "+")
-
-            window.location = url;
-
-        };
-
-
-    </script>
 </body>
 
 </html>

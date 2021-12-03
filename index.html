@@ -42,19 +42,21 @@
         <div class="rowsearch">
             <div class="searchContainerParent">
                 <div class="searchContainer">
-                    <div class="searchContainerBar">
-                        <img src="static/icons8-search.svg" class="searchIcon" height="18" width="18" alt="search icon svg">
-                        <input type="text" name="q" id="searchText" autocomplete="off">
-                        <img src="static/googleMic.svg" class="googleMic" height="18" width="18" alt="search icon svg">
-                    </div>
-                    <div class="searchContainerButtons">
-                        <button onclick="gSearch()">
-                            <input type="submit" id="gSearch" value="Google Search" onclick="gSearch">
-                        </button>
-                        <button onclick="LSearch()">
-                            <input type="submit" id="imLucky" value="I'm Feeling Lucky" onclick="LSearch">
-                        </button>
-                    </div>
+                    <form action="https://www.google.com/search">
+                        <div class="searchContainerBar">
+                            <img src="static/icons8-search.svg" class="searchIcon" height="18" width="18" alt="search icon svg">
+                            <input type="text" name="q" id="searchText" autocomplete="off">
+                            <img src="static/googleMic.svg" class="googleMic" height="18" width="18" alt="search icon svg">
+                        </div>
+                        <div class="searchContainerButtons">
+                            <button>
+                                <input type="submit" id="gSearch" value="Google Search">
+                            </button>
+                            <button>
+                                <input type="submit" name="btnI" id="imLucky" value="I'm Feeling Lucky">
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -116,35 +118,6 @@
             </li>
         </ul>
     </footer>
-    <script>
-
-
-
-        function gSearch() {
-            var txt = document.getElementById('searchText');
-
-            let url = "https://google.com/search?"
-            url = url + "q=" + txt.value
-
-            window.location = url;
-
-        };
-
-
-        function LSearch() {
-            var txt = document.getElementById('searchText');
-
-            let url = "https://google.com/search?"
-            let luckyparam = "&btnI=I%27m+Feeling+Lucky"
-            url = url + "q=" + txt.value + luckyparam
-
-            window.location = url;
-
-        };
-
-
-
-    </script>
 </body>
 
 </html>
