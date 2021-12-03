@@ -26,12 +26,12 @@
             </ul>
             <ul class="nav justify-content-end align-items-center">
                 <li class="nav-item">
-                    <li class="nav-item" >
-                        <a class="nav-link" href="index.html">Search</a>
-                    </li>
-                    <a class="nav-link" href="#" id="product-menu" onmouseover="mouseOver()" onmouseout="mouseOut()"><img src="static/buttonsymbolofninedots_80014.svg" class="products-menu" height="18" width="18" alt="9 dot svg for products menu">
-                        <div id="products-menu-circle" hidden></div>
-                    </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Search</a>
+                </li>
+                <a class="nav-link" href="#" id="product-menu" onmouseover="mouseOver()" onmouseout="mouseOut()"><img src="static/buttonsymbolofninedots_80014.svg" class="products-menu" height="18" width="18" alt="9 dot svg for products menu">
+                    <div id="products-menu-circle" hidden></div>
+                </a>
                 </li>
                 <li class="nav-item">
                     <button type="button" class="btn btn-primary">Sign in</button>
@@ -96,7 +96,7 @@
                             <div class="item-footer-1 business">
                                 <a href="">Terms</a>
                             </div>
-                            <div class="item-footer-1 howSearchWorks" >
+                            <div class="item-footer-1 howSearchWorks">
                                 <a href="" style="color: #f2f2f2;">How Search Works</a>
                             </div>
                         </div>
@@ -121,25 +121,25 @@
     <script>
 
 
-       
 
-            function advSearch() {
-                var all = document.getElementById('all');
-                var exact = document.getElementById('exact');
-                var any = document.getElementById('any');
-                var none = document.getElementById('none');
 
-                let url = "https://google.com/search?"
+        function advSearch() {
+            var all = document.getElementById('all');
+            var exact = document.getElementById('exact');
+            var any = document.getElementById('any');
+            var none = document.getElementById('none');
 
-                url = url +
-                    "&as_q=" + all.value.replace(/ /g, "+") +
-                    "&as_epq=" + exact.value.replace(/ /g, "+") +
-                    "&as_oq=" + any.value.replace(/ /g, "+") +
-                    "&as_eq=" + none.value.replace(/ /g, "+")
+            let url = "https://google.com/search?"
 
-                window.location = url;
+            url = url +
+                "&as_q=" + all.value.replace(/ /g, "+") +
+                "&as_epq=" + exact.value.replace(/ /g, "+") +
+                "&as_oq=" + any.value.replace(/ /g, "+") +
+                "&as_eq=" + none.value.replace(/ /g, "+")
 
-            };
+            window.location = url;
+
+        };
 
 
     </script>

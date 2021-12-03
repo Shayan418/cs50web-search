@@ -57,23 +57,13 @@
             </div>
             <div class="searchContainer search-hidden" id="searchByBox" hidden>
                 <div class="searchInfo">
-                    <div id="Searchbyimage" style="font-size: large; font-weight: bold; display: flex; flex-direction: row; justify-content: space-between;" >
-                        <div>
-                            Search by image
-                        </div>
-                        
-                        <div onclick="searchByBoxhide()" style="cursor: pointer;">
-                            x
-                        </div>
-
+                    <div id="Searchbyimage" style="font-size: large; font-weight: bold; display: flex; flex-direction: row; justify-content: space-between;">
+                        <div> Search by image </div>
+                        <div onclick="searchByBoxhide()" style="cursor: pointer;"> x </div>
                     </div>
-                    <div >
-                        Search Google with an image instead of text. Try dragging an image here.
-                    </div>
-                    
+                    <div> Search Google with an image instead of text. Try dragging an image here. </div>
                 </div>
             </div>
-            
         </div>
         <div class="languageBarParent" hidden>
             <div style="text-align: center; display: inline-block;">
@@ -152,13 +142,13 @@
         };
 
         function searchByBox() {
-  document.getElementById("searchByBox").removeAttribute("hidden");
+            document.getElementById("searchByBox").removeAttribute("hidden");
 
-}
+        }
 
-function searchByBoxhide() {
-  document.getElementById("searchByBox").setAttribute("hidden", true);
-}
+        function searchByBoxhide() {
+            document.getElementById("searchByBox").setAttribute("hidden", true);
+        }
 
 
     </script>
